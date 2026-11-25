@@ -15,7 +15,6 @@ class CriarPersonagemLabirinto():
 
 
 
-meurect = CriarPersonagemLabirinto(cores["Azul"], 10,10,220,190)
 
 
 ####Classe apenas para criar o "Retangulo / Personagem que vai andar pelo labirinto"
