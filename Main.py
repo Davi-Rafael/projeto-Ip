@@ -48,13 +48,29 @@ def mover(rect,dx,dy): #####função para mover
 
 
 
-rodando = True
 
-while rodando:
+
+
+
+
+
+
+
+
+
+
+
+
+
+pygame.init()
+
+fim_jogo = False
+
+while fim_jogo == False:
     for evento in pygame.event.get():
-        if evento.type == pygame.QUIT:
-            rodando = False
 
+        if evento.type == pygame.QUIT:
+            fim_jogo = True            #ACABA O LOOP PRINCIPAL
 
     teclas = pygame.key.get_pressed() #####esse comando serve pra ver qual tecla esta sendo pressionada
     dx = (teclas[pygame.K_RIGHT] - teclas[pygame.K_LEFT]) * Velocidade ## direção que ele vai andar vai * pela velocidade (Direção - outra direção pra caso ele apertar as duas, se anularem)
@@ -68,16 +84,4 @@ while rodando:
 
     pygame.display.flip() 
     Relogio.tick(Fps) #seta o fps do game 
-
-
-
 pygame.quit() #### quando acabar o while, ele fecha o pygame
-
-
-
-
-
-
-
-
-
