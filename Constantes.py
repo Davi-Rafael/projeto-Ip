@@ -1,45 +1,39 @@
-import pygame
-import sys
-pygame.init()
-
-
 cores = {
-    
-    "Vermelho": (255, 0, 0),
-    "Verde": (0, 128, 0),
+    "Vermelho": (255, 0, 0), 
+    "Verde": (0, 128, 0), 
     "Verde Limão": (0, 255, 0),
-    "Azul": (0, 0, 255),
-    "Amarelo": (255, 255, 0),
-    "Ciano": (0, 255, 255),
+    "Azul": (0, 0, 255), 
+    "Amarelo": (255, 255, 0), 
+    "Ciano": (0, 255, 255), 
     "Magenta": (255, 0, 255),
-    
-    "Branco": (255, 255, 255),
-    "Preto": (0, 0, 0),
+
+    "Branco": (255, 255, 255), 
+    "Preto": (0, 0, 0), 
     "Cinza": (128, 128, 128),
-    "Cinza Claro": (211, 211, 211),
-    "Cinza Escuro": (169, 169, 169),
+    "Cinza Claro": (211, 211, 211), 
+    "Cinza Escuro": (169, 169, 169), 
     "Prata": (192, 192, 192),
-    
-    "Laranja": (255, 165, 0),
-    "Laranja Escuro": (255, 140, 0),
+
+    "Laranja": (255, 165, 0), 
+    "Laranja Escuro": (255, 140, 0), 
     "Coral": (255, 127, 80),
-    "Salmão": (250, 128, 114),
-    "Rosa": (255, 192, 203),
+    "Salmão": (250, 128, 114), 
+    "Rosa": (255, 192, 203), 
     "Rosa Choque": (255, 20, 147),
-    "Marrom": (165, 42, 42),
-    "Bege": (245, 245, 220),
+    "Marrom": (165, 42, 42), 
+    "Bege": (245, 245, 220), 
     "Dourado": (255, 215, 0),
-    
-    "Azul Marinho": (0, 0, 128),
-    "Azul Claro": (173, 216, 230),
+
+    "Azul Marinho": (0, 0, 128), 
+    "Azul Claro": (173, 216, 230), 
     "Azul Céu": (135, 206, 235),
-    "Turquesa": (64, 224, 208),
-    "Verde Água": (127, 255, 212),
+    "Turquesa": (64, 224, 208), 
+    "Verde Água": (127, 255, 212), 
     "Verde Oliva": (128, 128, 0),
-    "Roxo": (128, 0, 128),
-    "Violeta": (238, 130, 238),
-    "Índigo": (75, 0, 130),
-    "Lavanda": (230, 230, 250)
+    "Roxo": (128, 0, 128), 
+    "Violeta": (238, 130, 238), 
+    "Índigo": (75, 0, 130), 
+    "Lavanda": (230, 230, 250),
 }
 
 
@@ -61,7 +55,19 @@ MAPA = [
     "#################################....",
 ]
 
+
 Tamanho = 40
 Fps = 60
 Velocidade = 5
 
+Margem = 5
+SAIDA = (36, 14)    # (coluna, linha): chegar aqui volta para o hub
+
+# portais do hub: (nome, coluna, linha, liberado)
+PORTAIS = [
+    ("Medieval", 8, 4, True),
+    ("TO COME", 18, 4, False),
+    ("TO COME", 28, 4, False),
+    ("TO COME", 18, 10, False),
+]
+INICIO_HUB = (18, 7)
